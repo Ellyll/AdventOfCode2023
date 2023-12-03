@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Day01_A.fs" />
+        <Compile Include="Day01_B.fs" />
+        <Compile Include="Program.fs"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+      <Content Include="Dockerfile" />
+      <Content Include="Data\Day01_A_data_test.txt" />
+      <Content Include="Data\Day01_data.txt" />
+      <Content Include="Data\Day01_B_data_test.txt" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="tmp\**" />
+    </ItemGroup>
+
+</Project>
